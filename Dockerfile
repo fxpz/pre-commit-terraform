@@ -205,6 +205,7 @@ RUN if [ "$(grep -o '^terraform-docs SKIPPED$' /usr/bin/tools_versions_info)" = 
     git config --global --add safe.directory /lint
 
 COPY tools/entrypoint.sh /entrypoint.sh
+COPY hooks /hooks
 
 ENV PRE_COMMIT_COLOR=${PRE_COMMIT_COLOR:-always}
 
